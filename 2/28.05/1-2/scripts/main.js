@@ -34,7 +34,7 @@ const run = () => {
                 return;
         }  
         
-        if(valueKitchen ==='1' && valueDnight ==='day' && valueLight === '1' && valueFreezer === '1') {
+        if(valueKitchen ==='1' && valueDnight ==='day' && valueFreezer === '1') {
                 console.log('Вітаю! Ви пройшли квест і можете взяти ковбасу.');
                 return;
         }     
