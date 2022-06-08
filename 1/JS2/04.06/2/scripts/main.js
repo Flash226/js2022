@@ -5,14 +5,15 @@ const input3 = document.querySelector(".input3");
 const result = document.querySelector(".result");
 const button = document.querySelector("button");
 
-let sideA = 1;
-let sideB = 2;
-let sideC = 3;
 
 button.addEventListener("click", function () {
   const val1 = Number(input1.value);
   const val2 = Number(input2.value);
   const val3 = Number(input3.value);
+
+  let sideA = 1;
+  let sideB = 2;
+  let sideC = 3;
 
   if (isNaN(val1) || isNaN(val2) || isNaN(val3)) {
     result.innerHTML = "Not a number value was detected. Triangle cannot be created";
