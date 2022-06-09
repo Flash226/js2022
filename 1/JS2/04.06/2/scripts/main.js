@@ -1,10 +1,8 @@
 const input1 = document.querySelector(".input1");
 const input2 = document.querySelector(".input2");
 const input3 = document.querySelector(".input3");
-
 const result = document.querySelector(".result");
 const button = document.querySelector("button");
-
 
 button.addEventListener("click", function () {
   const val1 = Number(input1.value);
