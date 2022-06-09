@@ -71,7 +71,7 @@ button.addEventListener("click", function () {
     }
     else if (hourInput > 11) {
       meridiem = 'PM';
-      if (hourInput === '12') {
+      if (hourInput === 12) {
         hour12 = 12;
       }
       else {
