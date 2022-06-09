@@ -106,9 +106,6 @@ button.addEventListener("click", function () {
   if (hour24.length < 2) {
     hour24 = "0" + hour24;
   }
-  if (hour12.length < 2) {
-    hour12 = "0" + hour12;
-  }
 
   result.innerHTML = "Time meridiem: " + ' ' + hour12 + ':' + minuteInput + meridiem + '<hr>' + 'Military time: ' + hour24 + ':' + minuteInput;
 });
