@@ -1,77 +1,105 @@
 const input1 = document.querySelector(".input1");
-
 const result = document.querySelector(".result");
 const button = document.querySelector("button");
 
-result.innerHTML = "Obichniy";
-
-
 button.addEventListener("click", function () {
   const val1 = input1.value;
+  let hourInput = Number();
+  let minuteInput = Number();
+  let meridiemInput = 'null';
+  let hour24 = Number();
+  let hour12 = Number();
+  let meridiem = '';
 
-
-  if (isNaN(val1) || isNaN(val2) || isNaN(val3)) {
-    result.innerHTML = "Not a number value was detected. Triangle cannot be created";
+  if (val1.length < 3 || val1.length > 7) {
+    result.innerHTML = "Not a time";
     return;
   }
 
-  if ((val2 + val1) < val3 || (val3 + val1) < val2 || (val2 + val3) < val1) {
-    result.innerHTML = "Triangle is impossible to create";
-    return;
+  if (val1[1] === ':') {
+    hourInput = (val1[0]);
+    minuteInput = val1[2] + val1[3];
+    if (val1.length > 4) {
+      meridiemInput = val1[4] + val1[5];
+    }
   }
-
-  if (val1 === val2 && val2 === val3 && val1 === val3) {
-    result.innerHTML = "Rovnostoronniy";
-    return;
-  }
-
-  if (val1 === val2 || val1 === val3 || val2 === val3) {
-    result.innerHTML = "Rovnobedrenniy";
+  else if (val1[2] === ':') {
+    hourInput = (val1[0] + val1[1]);
+    minuteInput = (val1[3] + val1[4]);
+    if (val1.length > 5) {
+      meridiemInput = val1[5] + val1[6];
+    }
   } else {
-    //шукаємо найменші сторони трикутника
-    if (val1 < val2 && val1 < val3) {
-      if (val2 < val3) {
-        sideA = val1;
-        sideB = val2;
-        sideC = val3;
-      } else {
-        sideA = val1;
-        sideB = val3;
-        sideC = val2;
+    result.innerHTML = "Enter the correct time";
+    return;
+  }
+
+  if ((minuteInput > 59) || (hourInput > 23) || (minuteInput === 'NaN') || (hourInput === 'NaN')) {
+    result.innerHTML = "Enter the correct time";
+    return;
+  }
+
+  if (meridiemInput === 'null') {
+  }
+  else if ((meridiemInput === 'PM') || (meridiemInput === 'pm')) {
+    meridiemInput = 'PM';
+  }
+  else if ((meridiemInput === 'AM') || (meridiemInput === 'am')) {
+    meridiemInput = 'AM';
+  }
+  else {
+    console.log(meridiemInput);
+    result.innerHTML = "Enter the correct time";
+    return;
+  }
+  
+  hourInput = Number(hourInput);
+  
+  if ((meridiemInput === 'PM' || meridiemInput === 'AM') && (hourInput === 0)) {
+    result.innerHTML = "Enter the correct time";
+    return;
+  }
+
+  if (meridiemInput === 'null') {
+    hour24 = hourInput;
+    if (hourInput < 12) {
+      meridiem = 'AM';
+      if (hourInput === 0) {
+        hour12 = 12;
+      } else if (hourInput < 12) {
+        hour12 = hourInput;
       }
     }
-    if (val2 < val1 && val2 < val3) {
-      if (val1 < val3) {
-        sideA = val2;
-        sideB = val1;
-        sideC = val3;
-      } else {
-        sideA = val2;
-        sideB = val3;
-        sideC = val1;
+    else if (hourInput > 11) {
+      meridiem = 'PM';
+      if (hourInput === '12') {
+        hour12 = 12;
       }
-    }
-    if (val3 < val1 && val3 < val2) {
-      if (val1 < val2) {
-        sideA = val3;
-        sideB = val1;
-        sideC = val2;
-      } else {
-        sideA = val3;
-        sideB = val2;
-        sideC = val1;
+      else {
+        hour12 = (hourInput - 12);
       }
-    }
-    if ((sideA / 3 * 4) === sideB && ((sideA / 3 * 5) === sideC)) {
-      result.innerHTML = "Egipetskiy";
-      return;
-    }
-    if ((sideA * sideA) + (sideB * sideB) === (sideC * sideC)) {
-      result.innerHTML = "Pryamoygolnuy";
-      return;
-    }
-    else {
-      result.innerHTML = "Obichniy";
     }
   }
+  else if (meridiemInput === 'PM') {
+    hour12 = hourInput;
+    meridiem = meridiemInput;
+    if (hourInput < 12) {
+      hour24 = (hourInput + 12);
+    }
+    else if (hourInput === 12) {
+      hour24 = 12;
+    }
+  }
+  else if (meridiemInput === 'AM') {
+    hour12 = hourInput;
+    meridiem = 'AM';
+    if (hourInput < 12) {
+      hour24 = hourInput;
+    }
+    else if (hourInput === 12) {
+      hour24 = '0';
+    }
+  }
+
+  result.innerHTML = "Time meridiem: " + ' ' + hour12 + ':' + minuteInput + meridiem + '<hr>' + 'Military time: ' + hour24 + ':' + minuteInput;
 });
