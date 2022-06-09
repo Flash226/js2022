@@ -101,7 +101,6 @@ button.addEventListener("click", function () {
   }
 
   hour24 = hour24 + "";
-  hour12 = hour12 + "";
 
   if (hour24.length < 2) {
     hour24 = "0" + hour24;
