@@ -54,8 +54,8 @@ button.addEventListener("click", function () {
   }
   
   hourInput = Number(hourInput);
-  
-  if ((meridiemInput === 'PM' || meridiemInput === 'AM') && (hourInput === 0)) {
+
+  if ((meridiemInput === 'PM' || meridiemInput === 'AM') && (hourInput === 0) || (hourInput > 12)) {
     result.innerHTML = "Enter the correct time";
     return;
   }
