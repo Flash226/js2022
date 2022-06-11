@@ -32,7 +32,7 @@ const summ = () => {
 
 const res = () => {
     let val1 = input1.value;
-    if (val1 ==='' || val1 === 0 || dod1 === 000){
+    if  (dod1 === 000){
         return;
     }
     dod2 = val1.slice(dod1.length + 1),(val1.length);
