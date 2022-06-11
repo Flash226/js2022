@@ -23,7 +23,7 @@ const check = (v) => {
 
 const summ = () => {
     let val1 = input1.value;
-    if (val1 ==='' || val1 === 0){
+    if (val1 ===''){
         return;
     }
     input1.value = val1 + '+';
