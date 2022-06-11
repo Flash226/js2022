@@ -12,8 +12,9 @@ const buttonEl9 = document.querySelector("#button9");
 const buttonEl10 = document.querySelector("#button10");
 const buttonEl11 = document.querySelector("#button11");
 const buttonEl12 = document.querySelector("#button12");
+const buttonEl13 = document.querySelector("#button13");
 let dod1 = 000;
-let dod2 = 000;
+let dod2;
 
 const check = (v) => {
     let val1 = input1.value;
@@ -25,8 +26,8 @@ const summ = () => {
     if (val1 ==='' || val1 === 0){
         return;
     }
-    dod1 = input1.value;
     input1.value = val1 + '+';
+    dod1 = val1;
 }
 
 const res = () => {
@@ -34,8 +35,12 @@ const res = () => {
     if (val1 ==='' || val1 === 0 || dod1 === 000){
         return;
     }
-    dod2 = val1.slice(val1.length - dod1.length - 1);
+    dod2 = val1.slice(dod1.length + 1),(val1.length);
     input1.value = Number(dod1) + Number(dod2);
+}
+
+const refresh = () => {
+    location.reload()
 }
 
 buttonEl1.addEventListener('click', function() {check(1)});
@@ -50,3 +55,4 @@ buttonEl9.addEventListener('click', function() {check(9)});
 buttonEl10.addEventListener('click', function() {check(0)});
 buttonEl11.addEventListener('click', summ);
 buttonEl12.addEventListener('click', res);
+buttonEl13.addEventListener('click', refresh);
