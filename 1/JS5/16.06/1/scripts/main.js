@@ -15,7 +15,7 @@ const fio = () => {
   } else {
     result2.innerHTML = '';
   }
-  val1 = val1.charAt(0).toUpperCase() + val1.slice(1);
+  val1 = val1.charAt(0).toUpperCase() + val1.slice(1).toLowerCase();
   val2 = val2.charAt(0).toUpperCase() + '.';
   if (val2 === '.') {
     val2 = '';
