@@ -9,7 +9,6 @@ const fio = () => {
   let val2 = input2.value;
   let val3 = input3.value;
   if ((/\W/.test(val1) === true && (/\'/.test(val1) != true)) || (/\d/.test(val1) === true) || (/\W/.test(val2) === true && (/\'/.test(val2) != true)) || (/\d/.test(val2) === true) || (/\W/.test(val3) === true && (/\'/.test(val3) != true)) || (/\d/.test(val3) === true)) {
-    console.log(val1.search);
     result2.innerHTML = 'Check the correctness';
     result2.style.backgroundColor = 'red';
     return;
