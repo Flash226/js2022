@@ -24,12 +24,9 @@ const fio = () => {
   if (val3 === '.') {
     val3 = '';
   }
-  console.log(val1, val2, val3);
   result1.innerHTML = `${val1} ${val2} ${val3}`;
 }
 
 input1.addEventListener('change', fio);
 input2.addEventListener('change', fio);
 input3.addEventListener('change', fio);
-
-
