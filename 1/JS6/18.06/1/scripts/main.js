@@ -54,8 +54,9 @@ const run = () => {
                 elStandart.innerHTML = `Стандарт: ${sdcard[2].standart}`;
                 elSpeed.innerHTML = `Клас швидкості: ${sdcard[2].speed}`;
                 elPic.innerHTML = `<img src="${sdcard[2].pic}">`;
+        } else {
+                location.reload();
         }
-        console.log(sdcard[0]);
 }
 
 elBrand.addEventListener('change', run);
