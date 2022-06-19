@@ -9,9 +9,9 @@ const fio = () => {
   let val2 = input2.value;
   let val3 = input3.value;
 
-  if ((/[^A-zА-я']/.test(val1) === true) 
-   || (/[^A-zА-я']/.test(val2) === true) 
-   || (/[^A-zА-я']/.test(val3) === true)) {
+  if ((/[^A-zА-яЇїІі']/.test(val1) === true) 
+   || (/[^A-zА-яЇїІі']/.test(val2) === true) 
+   || (/[^A-zА-яЇїІі']/.test(val3) === true)) {
     result2.innerHTML = 'Check the correctness';
     result2.style.backgroundColor = 'red';
     return;
