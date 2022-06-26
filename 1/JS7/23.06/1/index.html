@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="instruction">
+        Sort
+    </div>
+
+    <div class="sort">
+        <label>
+            Ware
+            <select name="sort">
+                <option value="">Sort by...</option>
+                <option value="name">Name</option>
+                <option value="power">Power</option>
+                <option value="coldPower">Cold Power</option>
+                <option value="heatPower">Heat Power</option>
+                <option value="wifi">WiFi</option>
+                <option value="compressor">Compressor</option>
+                <option value="area">Area</option>
+                <option value="price">Price</option>
+            </select>
+        </label>    
+    </div>
+
+    <div class="price">
+        Price min
+        <input type="text" class="priceMin"/>
+        Price max
+        <input type="text" class="priceMax"/>
+    </div>
+    
+    <div class="result"></div>  
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

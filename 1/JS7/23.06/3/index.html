@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change{
+            background-color: rgb(255, 255, 255);
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction">
+        Sorted
+    </div>
+    <hr>
+    <div class="brand">
+        <label>
+            Sort
+            <select name="sort">
+                <option value="">Sort by...</option>
+                <option value="name">Name</option>
+                <option value="power">Power</option>
+                <option value="coldPower">Cold Power</option>
+                <option value="heatPower">Heat Power</option>
+                <option value="wifi">WiFi</option>
+                <option value="compressor">Compressor</option>
+                <option value="area">Area</option>
+                <option value="price">Price</option>
+            </select>
+        </label>    
+    </div>
+    <hr>
+    <div class="price">
+        Price min
+        <input type="number" class="priceMin" value="0"/>
+        Price max
+        <input type="number" class="priceMax" value="32440"/>
+    </div>
+    <hr>
+    <div class="result">
+        <table>
+            
+        </table>
+    </div>  
+    
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
