@@ -17,16 +17,20 @@ const run = () => {
         const vPriceMin = Number(elPriceMin.value);
         const vSort = elSort.value;
 
-        let filtronware = ware.filter((pricex) => {
+        let sortWare = ware.filter((pricex) => {
                 return pricex.price <= vPriceMax && pricex.price >= vPriceMin;
         });
 
         let sorted = (field) => {
                 return (a, b) => a[field] > b[field] ? 1 : -1;
         }
-        filtronware.sort(sorted(vSort));
+        if (vSort === '') {
+                sortWare = ware;
+        } else {
+        sortWare.sort(sorted(vSort));
+        }
 
-        for (let i = 0; i < filtronware.length; i++) {
+        for (let i = 0; i < sortWare.length; i++) {
                 if (i === 0) {
                         elResult.innerHTML = `<tr>
                                 <th>Name</th>
@@ -38,30 +42,31 @@ const run = () => {
                                 <th>Compressor</th>
                                 <th>Price</th>
                                 </tr><tr>    
-                                <td>${filtronware[i].name}</td> 
-                                <td>${filtronware[i].power}</td> 
-                                <td>${filtronware[i].coldPower}</td> 
-                                <td>${filtronware[i].heatPower}</td>
-                                <td>${filtronware[i].wifi}</td>
-                                <td>${filtronware[i].area}</td>
-                                <td>${filtronware[i].compressor}</td>
-                                <td>${filtronware[i].price}</td>
+                                <td>${sortWare[i].name}</td> 
+                                <td>${sortWare[i].power}</td> 
+                                <td>${sortWare[i].coldPower}</td> 
+                                <td>${sortWare[i].heatPower}</td>
+                                <td>${sortWare[i].wifi}</td>
+                                <td>${sortWare[i].area}</td>
+                                <td>${sortWare[i].compressor}</td>
+                                <td>${sortWare[i].price}</td>
                                 </tr>`;
 
                 } else {
-                        elResult.innerHTML += `<tr><td>${filtronware[i].name}</td> 
-                                <td>${filtronware[i].power}</td> 
-                                <td>${filtronware[i].coldPower}</td> 
-                                <td>${filtronware[i].heatPower}</td>
-                                <td>${filtronware[i].wifi}</td>
-                                <td>${filtronware[i].area}</td>
-                                <td>${filtronware[i].compressor}</td>
-                                <td>${filtronware[i].price}</td>
+                        elResult.innerHTML += `<tr><td>${sortWare[i].name}</td> 
+                                <td>${sortWare[i].power}</td> 
+                                <td>${sortWare[i].coldPower}</td> 
+                                <td>${sortWare[i].heatPower}</td>
+                                <td>${sortWare[i].wifi}</td>
+                                <td>${sortWare[i].area}</td>
+                                <td>${sortWare[i].compressor}</td>
+                                <td>${sortWare[i].price}</td>
                                 </tr>`;
                 }
         }
 }
 
+run();
 elPriceMax.addEventListener('change', run);
 elPriceMin.addEventListener('change', run);
 elSort.addEventListener('change', run);
