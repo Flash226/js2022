@@ -25,7 +25,7 @@ const run = () => {
                 return (a, b) => a[field] > b[field] ? 1 : -1;
         }
         if (vSort === '') {
-                sortWare = ware;
+                sortWare = sortWare;
         } else {
         sortWare.sort(sorted(vSort));
         }
