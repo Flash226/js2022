@@ -198,7 +198,7 @@ const fieldGeneration = () => {
     width: max-content;
     grid-gap: 1px;
     position: relative;
-    top: -45px;
+    top: -40px;
     left: 15px;`;
         elButtons.style.cssText = `display: block;`;
     }
