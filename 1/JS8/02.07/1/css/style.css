@@ -11,6 +11,7 @@
 .active {
     background-color: rgb(172, 245, 252);
     animation: blink 0.5s infinite;
+    border-radius: 5px;
 }
 
 @keyframes blink {
