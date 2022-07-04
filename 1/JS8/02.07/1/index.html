@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Kub</title>
+</head>
+
+<body>
+
+    <label>
+        X
+        <input type="number" class="xn">
+    </label>
+    <label>
+        Y
+        <input type="number" class="yn">
+    </label>
+
+    <div class="changeLevel">
+        <label>
+            <select name="changeLevel">
+                <option value="">Change block level</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="fixedBlock">
+        <label>
+            <select name="fixedBlock">
+                <option value="">Change block fixed</option>
+                <option value="fixed">Fixed</option>
+                <option value="noFixed">No fixed</option>
+            </select>
+        </label>
+    </div>
+    <button type="button" id="button0">Generate</button>
+
+    <div class="field">
+
+    </div>
+    <div class="buttons">
+        <button type="button" id="button1">Left</button>
+        <button type="button" id="button2">Up</button>
+        <button type="button" id="button3">Down</button>
+        <button type="button" id="button4">Right</button>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
