@@ -56,7 +56,6 @@ const startRender = () => {
     blockCell = [];
     if (activeCell > nCell*0.7) {
         activeCell = Math.trunc(activeCell - nCell * 0.3);
-        console.log(activeCell)
     }
 
     for (let i = 0; i <= nCell; i = i + vXn) {
