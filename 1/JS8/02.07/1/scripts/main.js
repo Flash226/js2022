@@ -177,6 +177,12 @@ const fieldGeneration = () => {
         text-align: center;`;
         elButtons.style.cssText = `display: none;`;
         return;
+    } else if (blockCell.includes(nCell - 1) === true && blockCell.includes(nCell - vXn) === true) {
+        elField.innerHTML = `<hr>Game over! You lose! <hr>`;
+        elField.style.cssText = `font-size: 20px;
+        text-align: center;`;
+        elButtons.style.cssText = `display: none;`;
+        return;
     } else {
         for (let i = 0; i <= nCell; i++) {
             if (i === 0) {
