@@ -42,8 +42,8 @@ const startRender = () => {
     vFixedBlock = elFixedBlock.value;
     gameOver = 0
 
-    if (vXn < 3 || vYn < 3) {
-        elField.innerHTML = `<hr>Entered size field must be 3*3 or more! <hr>`;
+    if (vXn < 4 || vYn < 4) {
+        elField.innerHTML = `<hr>Entered size field must be 4*4 or more! <hr>`;
         elField.style.cssText = `font-size: 20px;
         text-align: center;`;
         elButtons.style.cssText = `display: none;`;
@@ -90,6 +90,7 @@ const startRender = () => {
             && findXY(activeCell, xblock, yblock) === -1
             && findXY(exitCell, xblock, yblock) === -1
             && findXY(exitCell, xblock + 1, yblock) === -1
+            && findXY(exitCell, xblock + 1, yblock + 1) === -1
             && findXY(exitCell, xblock, yblock + 1) === -1
             && xblock * yblock != vXn * vYn) {
 

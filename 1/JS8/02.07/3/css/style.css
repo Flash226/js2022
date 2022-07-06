@@ -1,37 +1,31 @@
-.field {
-
-}
-
 .field>* {
     background-color: rgb(246, 239, 239);
 }
 
 .active {
-    background-color: rgb(172, 245, 252);
+    background-color: rgba(47, 237, 254, 0.825);
     height: 50px;
     width: 50px;
-    border-radius: 5px;
+    border-radius: 9px;
     position: relative;
-    animation: blink 0.3s infinite;
+    animation: blinkA 0.3s infinite;
 }
 
-@keyframes blink {
+@keyframes blinkA {
     from {
         opacity: 1;
     }
-
     to {
-        opacity: 0.2;
+        opacity: 0.5;
     }
 }
-
+    
 .block {
     background-color: rgb(181, 181, 181);
     position: relative;
     height: 50px;
     width: 50px;
     border-radius: 1px;
-    
 }
 
 .exit {
@@ -40,14 +34,12 @@
     position: relative;
     height: 50px;
     width: 50px;
-    border-radius: 1px;
 }
 
 @keyframes blink {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0.8;
     }
@@ -82,7 +74,6 @@ button {
     position: relative;
     top: -75px;
     left: 200px;
-
 }
 
 button:hover {
