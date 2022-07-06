@@ -1,0 +1,139 @@
+.field {
+
+}
+
+.field>* {
+    background-color: rgb(246, 239, 239);
+}
+
+.active {
+    background-color: rgb(172, 245, 252);
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    position: relative;
+    animation: blink 0.3s infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
+    }
+}
+
+.block {
+    background-color: rgb(181, 181, 181);
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 1px;
+    
+}
+
+.exit {
+    background-color: rgb(9, 150, 37);
+    animation: blink 1s infinite;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 1px;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+button {
+    background-color: #008CBA;
+    width: 95px;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#button0 {
+    background-color: #4CAF50;
+    width: auto;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    position: relative;
+    top: -75px;
+    left: 200px;
+
+}
+
+button:hover {
+    border: 0.3px solid #F44336
+}
+
+
+#button3 {
+    position: relative;
+    top: px;
+    left: -84px;
+}
+
+#button4 {
+    position: relative;
+    top: px;
+    left: -84px;
+}
+
+#button1 {
+    position: relative;
+    top: px;
+    left: 15px;
+}
+
+#button2 {
+    position: relative;
+    top: -42px;
+    left: 15px;
+}
+
+input {
+    border: 1px solid #008CBA;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 5px;
+    width: 58px;
+}
+
+select {
+    position: relative;
+    top: px;
+    left: 15px;
+    border: 1px solid #008CBA;
+    padding: 7px 12px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: none;
+}

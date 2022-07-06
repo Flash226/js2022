@@ -223,7 +223,6 @@ const zverRun = () => {
 
 
 
-
 const fieldGeneration = () => {
     if (activeCell === nCell) {
         elField.innerHTML = `<hr>Congrats, you win! <hr>`;
