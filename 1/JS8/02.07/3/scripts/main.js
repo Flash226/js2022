@@ -115,7 +115,7 @@ const goToRight = () => {
                 let n = findXY(blockCell, activeCell[0].x + 1, activeCell[0].y);
                 blockCell[n].x = blockCell[n].x + 1;
                 activeCell[0].x = activeCell[0].x + 1;
-                if (blockCell[n].x === exitCell[0].x - 1 && blockCell[n].y === exitCell[0].y) {
+                if ((blockCell[n].x === exitCell[0].x && blockCell[n].y === exitCell[0].y - 1) || (blockCell[n].x === exitCell[0].x - 1 && blockCell[n].y === exitCell[0].y)) {
                     gameOver = gameOver + 1;
                 }
                 move(n);
@@ -181,7 +181,7 @@ const goToDown = () => {
                 let n = findXY(blockCell, activeCell[0].x, activeCell[0].y + 1);
                 blockCell[n].y = blockCell[n].y + 1;
                 activeCell[0].y = activeCell[0].y + 1;
-                if (blockCell[n].x === exitCell[0].x && blockCell[n].y === exitCell[0].y - 1) {
+                if ((blockCell[n].x === exitCell[0].x && blockCell[n].y === exitCell[0].y - 1) || (blockCell[n].x === exitCell[0].x - 1 && blockCell[n].y === exitCell[0].y)) {
                     gameOver = gameOver + 1;
                 }
                 move(n);
@@ -222,7 +222,7 @@ const fieldGeneration = () => {
 
     const elExit = document.querySelector('#exit');
     let exitCellPx = exitCell[0].x * 51;
-    let exitCellPy = exitCell[0].y * 51 - 50;
+    let exitCellPy = exitCell[0].y * 51;
     elExit.style.cssText = `top: ${exitCellPy}px;
         left: ${exitCellPx}px;`;
 
@@ -230,8 +230,7 @@ const fieldGeneration = () => {
         for (let i = 0; i < blockCell.length; i++) {
             const elBlock = document.querySelector(`#block${i}`);
             let left = blockCell[i].x * 51;
-            let p = i * 50 + 100;
-            let top = blockCell[i].y * 51 - p;
+            let top = blockCell[i].y * 51;
             elBlock.style.cssText = `top: ${top}px;
         left: ${left}px;`;
         }
@@ -251,8 +250,8 @@ const move = (n) => {
     if (n != undefined) {
         const elBlock = document.querySelector(`#block${n}`);
         left = blockCell[n].x * 51;
-        let p = n * 50 + 100;
-        top = blockCell[n].y * 51 - p;
+        let p = n * 50;
+        top = blockCell[n].y * 51;
         elBlock.style.cssText = `top: ${top}px;
         left: ${left}px;`;
 

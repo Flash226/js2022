@@ -7,7 +7,7 @@
     height: 50px;
     width: 50px;
     border-radius: 9px;
-    position: relative;
+    position: absolute;
     animation: blinkA 0.3s infinite;
 }
 
@@ -22,7 +22,7 @@
     
 .block {
     background-color: rgb(181, 181, 181);
-    position: relative;
+    position: absolute;
     height: 50px;
     width: 50px;
     border-radius: 1px;
@@ -31,7 +31,7 @@
 .exit {
     background-color: rgb(9, 150, 37);
     animation: blink 1s infinite;
-    position: relative;
+    position: absolute;
     height: 50px;
     width: 50px;
 }
