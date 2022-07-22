@@ -101,7 +101,6 @@ const startRender = () => {
 }
 
 const goToRight = () => {
-    zverRun();
     if (vFixedBlock != 'noFixed') {
         if (rightBorder.includes(activeCell) === false && blockCell.includes(activeCell + 1) === false) {
             activeCell = activeCell + 1;
@@ -121,10 +120,10 @@ const goToRight = () => {
         }
 
     }
+    zverRun();
 }
 
 const goToLeft = () => {
-    zverRun();
     if (vFixedBlock != 'noFixed') {
         if ((leftBorder.includes(activeCell) === false) && blockCell.includes(activeCell - 1) === false) {
             activeCell = activeCell - 1;
@@ -143,10 +142,10 @@ const goToLeft = () => {
             }
         }
     }
+    zverRun();
 }
 
 const goToUp = () => {
-    zverRun();
     if (vFixedBlock != 'noFixed') {
         if (activeCell > vXn && (blockCell.includes(activeCell - vXn) === false)) {
             activeCell = activeCell - vXn;
@@ -165,10 +164,10 @@ const goToUp = () => {
             }
         }
     }
+    zverRun();
 }
 
 const goToDown = () => {
-    zverRun();
     if (vFixedBlock != 'noFixed') {
         if (activeCell <= (nCell - vXn) && (blockCell.includes(activeCell + vXn) === false)) {
             activeCell = activeCell + vXn;
@@ -187,6 +186,7 @@ const goToDown = () => {
             }
         }
     }
+    zverRun();
 }
 
 
@@ -204,7 +204,8 @@ const zverRun = () => {
             && blockCell.includes(redZver[i] - 1) === false
             && redZver.includes(redZver[i] - 1) === false) {
             redZver[i] = redZver[i] - 1;
-        } else if ((activeCell > redZver[i] && redZver[i] / activeCell < 1)
+        } else if ((activeCell > redZver[i] 
+            && redZver[i] / activeCell < 1)
             && redZver[i] + vXn < nCell
             && blockCell.includes(redZver[i] + vXn) === false
             && redZver.includes(redZver[i] + vXn) === false) {
@@ -220,7 +221,6 @@ const zverRun = () => {
 
     }
 }
-
 
 
 const fieldGeneration = () => {
