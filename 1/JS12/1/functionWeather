@@ -1,0 +1,9 @@
+let weather = require ('weather-js');
+
+const findWeaser = (city) => {
+    weather.find({search: city, degreeType: 'C'}, function(err, result) {
+    if(err) console.log(err);
+    console.log(`${result[0].location.name} - ${result[0].current.temperature} ${result[0].location.degreetype}`);
+  })};
+  
+module.exports.find = findWeaser;
