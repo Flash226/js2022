@@ -1,0 +1,11 @@
+let weather = require ('weather-js');
+const findWeaser = (city) => {
+  return new Promise((res, rej) => {
+    weather.find({search: city, degreeType: 'C'}, function(err, result) {
+      if(err) console.log(err);
+      res(result);
+    });
+  });
+};
+
+module.exports = findWeaser;
