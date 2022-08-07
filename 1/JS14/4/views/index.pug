@@ -1,0 +1,13 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    
+p(style="background: #FBF6D9")= abzac
+
+p(style="background: #A9CCE3")= 'A message with a ' + 'blue' + ' background'
+
+ul
+  each val, key in {1: 'one', 2: 'two', 3: 'three'}
+    li= key + ': ' + val
