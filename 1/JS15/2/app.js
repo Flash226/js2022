@@ -15,7 +15,7 @@ const products = [
 ];
 
 serv.get('/', (req, res) => {
-    let cards = '';
+    let cards = JSON.stringify(products);
     for (i = 0; i < products.length; i++) {
         cards += `<div class="card"> <div class="name">${products[i].brand} ${products[i].model}</div>
         <div class="pic"><img class "imgCard" src="${products[i].picture}" alt="${products[i].brand} ${products[i].model}" height="180" ></div>
@@ -23,7 +23,11 @@ serv.get('/', (req, res) => {
         <div class="link"><a href="./product/${products[i].id}">Details...</a></div></div>`
     };
     res.render('main', { data: cards });
-})
+});
+
+serv.get('/api/allProducts', (req, res) => {
+    res.json(products);
+});
 
 serv.get('/product/:id', (req, res) => {
     const { id } = req.params;
@@ -43,6 +47,6 @@ serv.get('/product/:id', (req, res) => {
         price: product.price,
         picture: product.picture
     });
-})
+});
 
 serv.listen(3000);
