@@ -2,7 +2,6 @@ const container = document.querySelector('.container');
 
 const sendGetRequest = async () => {
     const res = await axios.get('./api/allProducts');
-    console.log(res.data);
     for (i = 0; i < res.data.length; i++) {
         let card = document.createElement('div');
         card.classList.add('card');
