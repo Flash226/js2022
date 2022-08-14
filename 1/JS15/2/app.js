@@ -21,8 +21,7 @@ serv.get('/', (req, res) => {
         <div class="pic"><img class "imgCard" src="${products[i].picture}" alt="${products[i].brand} ${products[i].model}" height="180" ></div>
         <div class="price">Price: ${products[i].price}</div>
         <div class="link"><a href="./product/${products[i].id}">Details...</a></div></div>`
-    }
-    console.log(cards)
+    };
     res.render('main', { data: cards });
 })
 
