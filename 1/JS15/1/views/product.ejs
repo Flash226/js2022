@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+                <div class="card one">
+                    <a href="/">
+                        <<< Back</a>
+                    <div class="name"><h1>
+                        <%= category %>
+                            <%= brand %>
+                                <%= model %>
+                    </h1></div>
+                    <div class="picOne"><img src="<%= picture %>" alt="<%= brand %> <%= model %>"></div>
+                    <div class="parametrs">Diagonal: <%= diagonal %>
+                    </div>
+                    <div class="parametrs">Resolution: <%= resolution %> px
+                    </div>
+                    <div class="parametrs">Year: <%= year %>
+                    </div>
+                    <div class="parametrs">Country: <%= country %>
+                    </div>
+                    <div class="price">Price: <%= price %>
+                    </div>
+
+                </div>
+    </div>
+
+
+</body>
+
+</html>
