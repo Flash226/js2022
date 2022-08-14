@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .card {
+    height: 250px;
+    width: 33.333%; 
+    background: rgb(230, 225, 225);
+    border:1px solid #333;
+    float: left;
+  }
+  
+  .container {
+      overflow: hidden;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .one {
+    height: auto;
+    width: 450px; 
+    background: rgb(230, 225, 225);
+    border:1px solid #333;
+    float: center;
+  }
+
+  .one img {
+    width: 445px;
+    height: auto;
+    padding: 25px;
+  }
+  .name {
+    font-size: 15px;
+  }
+
+  .parametrs {
+    font-size: 18px;
+    font-style: italic;
+    padding: 3px 0 0 3px;
+  }
+
+  .price {
+    font-size: 30px;
+    padding: 5px 0 0 3px;
+  }
