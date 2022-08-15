@@ -7,7 +7,7 @@ const axios = require('axios');
 server.set('view engine', 'ejs');
 server.set('views', './views/');
 
-server.use(express.static(`${__dirname}./public`));
+server.use(express.static(`./public`));
 
 
 server.get('/', (req, res) => {
