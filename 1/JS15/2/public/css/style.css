@@ -31,11 +31,13 @@
 }
   
   .card {
-    height: 250px;
-    width: 33.333%; 
+    height: 280px;
+    width: 33%; 
     background: rgb(230, 225, 225);
     border:1px solid #333;
     float: left;
+    margin: 0.11%;
+    padding: 10px;
   }
   
   .container {
@@ -55,21 +57,23 @@
   }
 
   .one img {
-    width: 445px;
+    width: 428px;
     height: auto;
-    padding: 25px;
+    padding: 10px;
   }
   .name {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .parametrs {
     font-size: 18px;
     font-style: italic;
-    padding: 3px 0 0 3px;
   }
 
-  .price {
+  .price{
     font-size: 30px;
+  }
+
+  .link {
     padding: 5px 0 0 3px;
   }
