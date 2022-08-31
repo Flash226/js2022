@@ -17,11 +17,9 @@ router.get('/', (req, res) => {
     res.render('main');
 });
 
-
 router.get('/uploaded', (req, res) => {
    res.render('uploaded', { db });
 });
-
 
 const storage = multer.diskStorage({
    destination: (req, file, cb) => {
@@ -43,12 +41,10 @@ function uploadFiles(req, res) {
    fs.rename(`./uploads/${req.files[0].filename}`, `./public/uploads/${newFileName}`, err => {
       if(err) throw err; 
       res.json({ message: "Successfully uploaded files" });
+
       if (db.includes(newFileName) === false) { 
       db.push(`${sha1sum}.${mime.extension(`${req.files[0].mimetype}`)}`)
-      console.log(db)
-
       const json = Object.assign({}, db);
-      console.log(json);
       }
    });
 }
