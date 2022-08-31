@@ -12,19 +12,17 @@
         <a href="/" style="color: white; padding-right: 30px;">File upload</a> 
         <a href="/uploaded" style="color: white;">Uploaded file</a> </div>
 
-        <div class="form" style="padding-top: 30px;">
-            <form id="form">
-            
-                <!-- <label for="name">Your name</label> <br>
-                <input name="name" id="name" placeholder="Enter your name" style="margin-bottom: 15px;"><br> -->
-                
-                <label for="file">Select files</label><br>
-                <input id="files" type="file">
-           
-            <button class="submit-btn" type="submit">Upload</button>
-        </form>
+        <div class="foto" style="padding-top: 30px;">
+
+            <% for(var i=0; i<(db.length); i++) {%>
+                <div class="item">
+                    <div class="pic"><img class "imgCard" src="/uploads/<%= db[i] %>"
+                        alt="" height="180"></div>
+                        
+                </div>
+                    <%} %>
         </div>
-    <script src="./script.js"></script>
+    <script src="./uploaded.js"></script>
 
 
 </body>
